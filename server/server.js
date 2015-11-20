@@ -8,6 +8,7 @@ var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 
 server.listen(port);
+console.log('heeelllloo!')
 
 var storage = {};
 
@@ -16,6 +17,7 @@ io.on('connection', function (socket) {
     socket.join('/'+data);
     storage[data] = {};
     socket.on('userData', function (info) {
+      console.log(info);
       storage[data][info.id] = info;
       socket.emit('serverData', storage[data]);
     });
