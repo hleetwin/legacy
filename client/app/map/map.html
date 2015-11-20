@@ -13,7 +13,7 @@
     <ng-map height="1000px" default-style="true" center="current-location" zoom="14">
     <div class="chatbox">
     message: 
-      <form ng-submit="map.showInfoWindow('usernameInfo')">
+      <form ng-submit='test(map, "usernameInfo")'>
         <input ng-model='user.message'></input>
       </form>
     </div>
