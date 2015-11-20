@@ -6,21 +6,22 @@
     </h1>
   </div>
 
-  <div class="chatbox">
-  message: 
-    <form ng-submit='postMessage()'>
-      <input ng-model='user.message'></input>
-    </form>
-  </div>
+  
 
   <div class = 'col-md-12 col-sm-12 col-xs-12'>
   <h4>Map: {{mapName}}</h4>
     <ng-map height="1000px" default-style="true" center="current-location" zoom="14">
+    <div class="chatbox">
+    message: 
+      <form ng-submit="map.showInfoWindow('usernameInfo')">
+        <input ng-model='user.message'></input>
+      </form>
+    </div>
       <div ng-repeat="client in tempDataStore">
         <marker position="{{client.latitude}},{{client.longitude}}" class="mark" on-mouseover="map.showInfoWindow('usernameInfo')" ></marker>   
         <info-window id="usernameInfo" visible-on-marker="foo">
           <div id="bodyContent">
-            {{ client.userName }}
+            {{ user.message }}
           </div>
         </info-window>
      </div>
