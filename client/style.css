@@ -47,3 +47,25 @@
 .map {
   height: 100%;
 }
+
+.index {
+  font-size: 30px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: white;
+  margin: 10px;
+  border-radius: 5px;
+  wide: 80%;
+  background-color: #6496c8;
+}
+
+.create {
+  font-size: 30px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: white;
+  margin: 10px;
+  border-radius: 5px;
+  wide: 80%;
+  background-color: #6496c8;
+}

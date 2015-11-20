@@ -1,12 +1,8 @@
 <div ng-init='init()'>
   <div id='map'>
     <h1 class = 'jumbotron'>Hacker Tracker
-    <div class='navbar col-md-3 col-sm-3 col-xs-6 col-md-offset-9 col-sm-offset-9 col-xs-offset-6'>
-      <ul class='nav'>
-        <li><a href='#/facebook' class='index' ng-click="logOut()">Home</a></li>
-        <li><a href='#/logout' class='create' ng-click="logOut(true)">Logout</a></li>
-      </ul>
-    </div>
+      <a href='#/facebook' class='index' ng-click='logOut()' style='float: left'>Home</a>
+      <a href='#/logout' class='create' ng-click='logOut(true)' style='float: right'>Log Out</a>
     </h1>
   </div>
 
