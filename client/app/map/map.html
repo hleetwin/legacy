@@ -21,6 +21,7 @@
         <marker position="{{client.latitude}},{{client.longitude}}" class="mark" on-mouseover="map.showInfoWindow('usernameInfo')" ></marker>   
         <info-window id="usernameInfo" visible-on-marker="foo">
           <div id="bodyContent">
+            {{ user.userName }} <br>
             {{ user.message }}
           </div>
         </info-window>
