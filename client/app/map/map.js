@@ -8,6 +8,7 @@ angular.module('app.map', ['ngOpenFB'])
   $scope.user.userPic = ClientHelper.storage[0].picture;
   $scope.user.latitude = '';
   $scope.user.longitude = '';
+  $scope.user.message = '';
 
   $scope.mapName = "";
 
@@ -21,6 +22,8 @@ angular.module('app.map', ['ngOpenFB'])
   $scope.show = function() {
 
   }
+
+  $scope.postMessage()
 
   $scope.locationCheck = function () {
     if (navigator.geolocation) {
