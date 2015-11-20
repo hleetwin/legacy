@@ -15,6 +15,11 @@ angular.module('app.map', ['ngOpenFB'])
   $scope.tempDataStore;
   $scope.intervalFunc;
 
+  $scope.test = function(map, windowName) {
+    map.showInfoWindow(windowName);
+    $scope.postMessage();
+  }
+
   socket.on('serverData', function (data) {
     $scope.tempDataStore = data;
   });
