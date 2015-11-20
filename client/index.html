@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
   </head>
   <body>
-    <h1 class = 'jumbotron'>Hacker Tracker</h1>
 
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
 
@@ -23,7 +22,8 @@
       var socket = io.connect('http://localhost:8000');
     </script>-->
     <script>
-      var socket = io.connect('http://hacker-tracker.herokuapp.com/');
+      // var socket = io.connect('http://hacker-tracker.herokuapp.com/');
+      var socket = io.connect('http://localhost:8000')
     </script>
 
     <script src="/socket.io/socket.io.js"></script>
