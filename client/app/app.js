@@ -36,4 +36,10 @@ angular.module('app', [
       redirectTo: '/home'
     });
 
+})
+
+.run(function ($rootScope, NgMap) {
+  NgMap.getMap().then(function(map) {
+    $rootScope.map = map;
+  });
 });
