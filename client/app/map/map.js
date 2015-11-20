@@ -23,7 +23,6 @@ angular.module('app.map', ['ngOpenFB'])
 
   }
 
-  $scope.postMessage()
 
   $scope.locationCheck = function () {
     if (navigator.geolocation) {
