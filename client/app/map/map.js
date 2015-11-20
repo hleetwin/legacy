@@ -18,6 +18,10 @@ angular.module('app.map', ['ngOpenFB'])
     $scope.tempDataStore = data;
   })
 
+  $scope.show = function() {
+
+  }
+
   $scope.locationCheck = function () {
     if (navigator.geolocation) {
       console.log('Geolocation is supported!');
