@@ -28,6 +28,7 @@ angular.module('app.map', ['ngOpenFB'])
     } else {
       console.log('Geolocation is not supported for this Browser/OS version yet.');
     }
+   
 
     var startPos;
     var geoSuccess = function (position) {
