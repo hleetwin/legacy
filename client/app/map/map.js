@@ -17,13 +17,20 @@ angular.module('app.map', ['ngOpenFB'])
 
   socket.on('serverData', function (data) {
     $scope.tempDataStore = data;
+  });
+
+  socket.on('message', function (message) {
+    window.alert(message);
   })
+
+  $scope.postMessage = function () {
+    console.log('posting');
+    socket.emit('msg', $scope.user.message);
+  }
 
   $scope.show = function() {
 
   }
-
-  $scope.postMessage()
 
   $scope.locationCheck = function () {
     if (navigator.geolocation) {

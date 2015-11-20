@@ -26,6 +26,9 @@ io.on('connection', function (socket) {
       socket.leave('/'+data);
       socket.emit('serverData', storage[data]);
     })
+    socket.on('msg', function (info) {
+      socket.emit('message', info);
+    })
   });
 });
 
