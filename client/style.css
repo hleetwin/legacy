@@ -70,3 +70,9 @@
   /*background-color: #6496c8;*/
 }
 
+.chatlog {
+  margin-top: 3em;
+}
+.chatlog ul{
+  border: solid 1px #eee;
+}
