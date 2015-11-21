@@ -22,6 +22,7 @@
 
 .navbar .nav li > a:active {
   background-color: #27496d;
+ /* background-color: #3aa3e6;*/
   border-radius: 5px;
 }
 
@@ -30,7 +31,7 @@
   margin: 10px;
   border-radius: 5px;
   wide: 80%;
-  background-color: #6496c8;
+  background-color: #3aa3e6;
 }
 
 .nav {
@@ -52,22 +53,25 @@
   font-size: 15px;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  color: #0064cc;
+  color: #3aa3e6;
   margin: 10px;
   border-radius: 5px;
   /*wide: 80%;*/
-  /*background-color: #6496c8;*/
+ /* background-color: #6496c8;*/
+  /*background-color: #3aa3e6;*/
 }
 
 .create {
   font-size: 15px;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  color: #0064cc;
-  margin: 10px;
+  color: #3aa3e6;
+  /*margin: 10px;*/
   border-radius: 5px;
   /*wide: 80%;*/
-  /*background-color: #6496c8;*/
+  /*edit*/
+ /* background-color: #3aa3e6;*/
+/*  background-color: #6496c8;*/
 }
 
 .chatlog {
