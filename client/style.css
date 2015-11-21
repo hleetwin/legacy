@@ -56,9 +56,9 @@
   color: #3aa3e6;
   margin: 10px;
   border-radius: 5px;
-  /*wide: 80%;*/
+  wide: 80%;
  /* background-color: #6496c8;*/
-  /*background-color: #3aa3e6;*/
+  
 }
 
 .create {
@@ -68,7 +68,7 @@
   color: #3aa3e6;
   /*margin: 10px;*/
   border-radius: 5px;
-  /*wide: 80%;*/
+  wide: 80%;
   /*edit*/
  /* background-color: #3aa3e6;*/
 /*  background-color: #6496c8;*/
