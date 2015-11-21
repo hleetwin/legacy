@@ -10,10 +10,17 @@
   <h4>Welcome to {{mapName}}!</h4>
     <ng-map height="1000px" default-style="true" center="current-location" zoom="14">
     <div class="chatbox">
-    Message: 
-      <form ng-submit='submitMessage(map, "usernameInfo")'>
-        <input ng-model='user.message'></input>
-      </form>
+      <div class="col-md-8 col-md-offset-2">
+        <form>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea class="form-control" rows="3" ng-model='user.message'></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" ng-submit='submitMessage(map, "usernameInfo")'>Submit</button>
+         </div>
+         </form>
+      </div>
     </div>
     <div ng-repeat="client in tempDataStore">
       <marker position="{{client.latitude}},{{client.longitude}}" class="mark" on-mouseover="map.showInfoWindow('usernameInfo')" ></marker>   
@@ -28,11 +35,11 @@
     <br>
     <br>
     <br>
-    <h1>Hello</h1>
+    <h1>All Chats</h1>
     <div class="groupChat">
-      Chatlog:
-        <form>
-        <form>
+      <div ng-repeat="client in tempDataStore">
+        <b>{{client.userName}}</b>: {{ client.message }}
+      </div>
     </div>
   </div>
 
