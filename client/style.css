@@ -70,9 +70,13 @@
   /*background-color: #6496c8;*/
 }
 
-.chatlog {
-  margin-top: 3em;
+.chatLog {
+  margin-top: 3.5em;
 }
-.chatlog ul{
+.chatLog ul{
   border: solid 1px #eee;
+}
+
+.chatInput{
+  padding-top: 1.5em;
 }
