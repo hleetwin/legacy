@@ -6,18 +6,17 @@
     </h1>
   </div>
 
-  <div class = 'col-md-12 col-sm-12 col-xs-12'>
+  <div class = 'col-md-12 col-sm-12 col-xs-12 text-center'>
   <h4>Welcome to {{mapName}}!</h4>
     <ng-map height="1000px" default-style="true" center="current-location" zoom="14">
     <div class="chatbox">
       <div class="col-md-8 col-md-offset-2">
         <form>
           <div class="form-group">
-            <label>Message</label>
-            <textarea class="form-control" rows="3" ng-model='user.message'></textarea>
+            <textarea class="form-control" rows="3" ng-model='user.message' placeholder="Enter chat message here"></textarea>
           </div>
           <div class="form-group">
-            <button type="submit" class="btn btn-primary" ng-submit='submitMessage(map, "usernameInfo")'>Submit</button>
+            <button type="submit" class="btn btn-primary" ng-submit='submitMessage(map, "usernameInfo")'>Submit message</button>
          </div>
          </form>
       </div>
