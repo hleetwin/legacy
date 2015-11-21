@@ -27,7 +27,7 @@ io.on('connection', function (socket) {
       socket.emit('serverData', storage[data]);
     })
     socket.on('msg', function (info) {
-      socket.emit('message', info);
+      socket.broadcast.emit('message', info);
     })
   });
 });
