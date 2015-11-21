@@ -1,10 +1,11 @@
-angular.module('app.map', ['ngOpenFB'])
+angular.module('app.map', ['ngOpenFB', 'ngMap'])
 
-.controller('MapController', ['$scope', '$openFB', '$interval', 'ClientHelper', function ($scope, $openFB, $interval, ClientHelper) {
+.controller('MapController', ['$scope', '$openFB', '$interval', 'ClientHelper', 'NgMap', function ($scope, $openFB, $interval, ClientHelper, NgMap) {
   // methods to be used inside map.html
+  var map;
   $scope.user = {};
   $scope.user.id = ClientHelper.storage[0].id;
-  $scope.user.userName = ClientHelper.storage[0].name;
+  $scope.user.userName = ClientHelper.storage[0].name.split(' ').join('');
   $scope.user.userPic = ClientHelper.storage[0].picture;
   $scope.user.latitude = '';
   $scope.user.longitude = '';
@@ -24,15 +25,14 @@ angular.module('app.map', ['ngOpenFB'])
     $scope.tempDataStore = data;
   });
 
-  socket.on('message', function (message) {
+  socket.on('message', function (info) {
     var groupChat = angular.element( document.querySelector('.groupChat'));
-    groupChat.append('<li>' + message + '</li>');
-
+    groupChat.append('<li>' + info.message + '</li>');
   })
 
   $scope.postMessage = function () {
     console.log('posting');
-    socket.emit('msg', $scope.user.message);
+    socket.emit('msg', $scope.user);
   }
 
 
