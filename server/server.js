@@ -25,7 +25,7 @@ io.on('connection', function (socket) {
       socket.emit('serverData', storage[data]);
     })
   })
-  socket.on('msg', function(message) {
+  socket.on('msg', function (message) {
     console.log(message);
     io.sockets.emit('message', message);
   });
