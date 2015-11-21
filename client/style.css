@@ -1,10 +1,10 @@
 .jumbotron {
   color: black;
-  font-family: 'Lobster', cursive;
-  font-size: 80px;
+  font-family: 'Courier New';
+  font-size: 50px;
   font-style: normal;
   font-variant: normal;
-  font-weight: 300;
+  font-weight: bold;
   padding: 20px;
   line-height: 26.3999996185303px;
   text-align: center;
@@ -49,7 +49,7 @@
 }
 
 .index {
-  font-size: 30px;
+  font-size: 15px;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   color: #0064cc;
@@ -60,7 +60,7 @@
 }
 
 .create {
-  font-size: 30px;
+  font-size: 15px;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   color: #0064cc;
