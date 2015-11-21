@@ -26,7 +26,7 @@ angular.module('app.map', ['ngOpenFB'])
 
   socket.on('message', function (message) {
     var groupChat = angular.element( document.querySelector('.groupChat'));
-    groupChat.append('<p>' + message + '</p>');
+    groupChat.append('<li>' + message + '</li>');
 
   })
 

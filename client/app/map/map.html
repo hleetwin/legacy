@@ -21,20 +21,18 @@
       </ng-map>    
     </div>
     <div class='col-md-6'>
-      <div class="chatInput">
-        <h4>Welcome to {{mapName}}!</h4>
-        <form>
-          <div class="form-group">
-            <textarea class="form-control" rows="3" ng-model='user.message' placeholder="Enter chat message here"></textarea>
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-default" ng-submit='submitMessage(map, "usernameInfo")'>Submit message</button>
-         </div>
-        </form>
-      </div>
-      <div class="chatLog">
+      <h4>Welcome to {{mapName}}!</h4>
+      <form>
+        <div class="form-group">
+          <textarea class="form-control" rows="3" ng-model='user.message' placeholder="Enter chat message here"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default" ng-click='submitMessage(map, "usernameInfo")'>Submit message</button>
+       </div>
+      </form>
+      <div class="chatlog">
         <h4>All Chats</h4>
-        <ul>
+        <ul class="groupChat">
           <li>some chats</li>
           <li>some other chat</li>
         </ul>
