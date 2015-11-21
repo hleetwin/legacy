@@ -17,12 +17,12 @@
 
 .navbar .nav li > a:hover {
   background-color: #346392;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .navbar .nav li > a:active {
   background-color: #27496d;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .nav li {
@@ -52,10 +52,10 @@
   font-size: 30px;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  color: white;
+  color: #006bb3;
   margin: 10px;
   border-radius: 5px;
-  /*wide: 80%;*/
+  width: 80%;
   /*background-color: #6496c8;*/
 }
 
@@ -63,10 +63,10 @@
   font-size: 30px;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  color: white;
+  color: #006bb3;
   margin: 10px;
   border-radius: 5px;
-  /*wide: 80%;*/
+  width: 80%;
   /*background-color: #6496c8;*/
 }
 
