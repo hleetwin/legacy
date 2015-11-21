@@ -10,7 +10,6 @@
   <h4>Welcome to {{mapName}}!</h4>
     <ng-map height="1000px" default-style="true" center="current-location" zoom="14">
     <div class="chatbox">
-    Message: 
       <form>
         <div class="form-group">
           <label>Message</label>
@@ -32,11 +31,11 @@
     <br>
     <br>
     <br>
-    <h1>Hello</h1>
+    <h1>All Chats</h1>
     <div class="groupChat">
-      Chatlog:
-        <form>
-        <form>
+      <div ng-repeat="client in tempDataStore">
+        <b>{{client.userName}}</b>: {{ client.message }}
+      </div>
     </div>
   </div>
 
