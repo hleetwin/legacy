@@ -15,8 +15,8 @@ angular.module('app.map', ['ngOpenFB'])
   $scope.tempDataStore;
   $scope.intervalFunc;
 
-  $scope.test = function(map, windowName) {
-    map.showInfoWindow(windowName);
+  $scope.submitMessage = function(map, windowName) {
+    $scope.showBubble(map, windowName);
     $scope.postMessage();
   }
 
@@ -33,9 +33,6 @@ angular.module('app.map', ['ngOpenFB'])
     socket.emit('msg', $scope.user.message);
   }
 
-  $scope.show = function() {
-
-  }
 
   $scope.locationCheck = function () {
     if (navigator.geolocation) {
@@ -69,5 +66,9 @@ angular.module('app.map', ['ngOpenFB'])
     $scope.mapName = ClientHelper.storage2[0];
     socket.emit('init', ClientHelper.storage2[0]);
     $scope.intervalFunc = $interval($scope.locationCheck, 3000);
+  }
+
+  $scope.showBubble = function(map, elementName){
+    map.showInfoWindow(elementName);
   }
 }]);

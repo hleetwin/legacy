@@ -6,32 +6,35 @@
     </h1>
   </div>
 
-  
-
   <div class = 'col-md-12 col-sm-12 col-xs-12'>
   <h4>Welcome to {{mapName}}!</h4>
     <ng-map height="1000px" default-style="true" center="current-location" zoom="14">
     <div class="chatbox">
     Message: 
-      <form ng-submit='test(map, "usernameInfo")'>
-        <input ng-model='user.message' placeholder="Begin your chat here!"></input>
+      <form ng-submit='submitMessage(map, "usernameInfo")'>
+        <input ng-model='user.message'></input>
       </form>
     </div>
-      <div ng-repeat="client in tempDataStore">
-        <marker position="{{client.latitude}},{{client.longitude}}" class="mark" on-mouseover="map.showInfoWindow('usernameInfo')" ></marker>   
-        <info-window id="usernameInfo" visible-on-marker="foo">
-          <div id="bodyContent">
-            {{ user.userName }} <br>
-            {{ user.message }}
-          </div>
-        </info-window>
-     </div>
+    <div ng-repeat="client in tempDataStore">
+      <marker position="{{client.latitude}},{{client.longitude}}" class="mark" on-mouseover="map.showInfoWindow('usernameInfo')" ></marker>   
+      <info-window id="usernameInfo" visible-on-marker="foo">
+        <div id="bodyContent">
+          {{ user.userName }} <br>
+          {{ user.message }}
+        </div>
+      </info-window>
+    </div>
     </ng-map>
-   <!--  edits-groupchat log -->
-     <div class="groupChat">
+    <br>
+    <br>
+    <br>
+    <h1>Hello</h1>
+    <div class="groupChat">
       Chatlog:
         <form>
         <form>
+    </div>
   </div>
+
   
 </div>
