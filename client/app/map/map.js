@@ -25,14 +25,14 @@ angular.module('app.map', ['ngOpenFB', 'ngMap'])
     $scope.tempDataStore = data;
   });
 
-  socket.on('message', function (info) {
+  socket.on('message', function (message) {
     var groupChat = angular.element( document.querySelector('.groupChat'));
-    groupChat.append('<li>' + info.message + '</li>');
+    groupChat.append('<li>' + message + '</li>');
   })
 
   $scope.postMessage = function () {
     console.log('posting');
-    socket.emit('msg', $scope.user);
+    socket.emit('msg', $scope.user.message);
   }
 
 
@@ -67,7 +67,7 @@ angular.module('app.map', ['ngOpenFB', 'ngMap'])
   $scope.init = function (){
     $scope.mapName = ClientHelper.storage2[0];
     socket.emit('init', ClientHelper.storage2[0]);
-    $scope.intervalFunc = $interval($scope.locationCheck, 3000);
+    $scope.intervalFunc = $interval($scope.locationCheck, 1000);
   }
 
   $scope.showBubble = function(map, elementName){
