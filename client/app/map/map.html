@@ -8,10 +8,10 @@
 
   <div class="container">
     <div class='col-md-6'>
-      <class ='map' ng-map height="1000px" default-style="true" center="current-location" zoom="14">
+      <ng-map height="1000px" default-style="true" center="current-location" zoom="14">
         <div ng-repeat="client in tempDataStore">
           <marker id="{{client.userName}}" position="{{client.latitude}},{{client.longitude}}" class="mark" on-mouseover="map.showInfoWindow('usernameInfo')" ></marker>
-          <info-window id="usernameInfo" visible-on-marker="foo">
+          <info-window id="usernameInfo" position="{{client.latitude}},{{client.longitude}}" visible-on-marker="foo">
             <div id="bodyContent">
               {{ client.userName }} <br>
               {{ client.message }}
