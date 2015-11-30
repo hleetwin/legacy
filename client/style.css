@@ -80,3 +80,7 @@
 .chatInput{
   padding-top: 1.5em;
 }
+
+span.big {
+  font-size: 2em;
+}
