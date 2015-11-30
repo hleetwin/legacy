@@ -82,10 +82,10 @@ angular.module('app.map', ['ngOpenFB', 'ngMap'])
   $scope.confirmAddress = function() {
     socket.emit('address', $scope.address);
 
-    socket.on('addr', function () {
+    socket.on('addr', function (address) {
       var confirmation = angular.element( document.querySelector('#confirmation'));
       confirmation.empty();
-      confirmation.append('<p>' + $scope.address + '</p>'); 
+      confirmation.append('<p>' + address + '</p>'); 
     });
   }
 }]);
