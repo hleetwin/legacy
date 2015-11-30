@@ -18,6 +18,9 @@
             </div>
           </info-window>
         </div>
+        <marker position="{{address}}"
+          centered="true">
+        </marker>
       </ng-map>    
     </div>
     <div class='col-md-4'>
@@ -43,5 +46,14 @@
       </ul>
 
     </div>
+  </div>
+  <br>
+  <div class='col-md-offset-2 col-md-4'>
+  Meeting Address
+    <form>
+      <input ng-model='address'></input>
+    </form>
+    <button ng-click='placeMarker(map, address)'>Confirm Location</button>
+    <button ng-click='markAddress(map)'>Get Directions</button>
   </div>
 </div>
