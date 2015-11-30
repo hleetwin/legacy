@@ -85,6 +85,7 @@ angular.module('app.map', ['ngOpenFB', 'ngMap'])
     socket.emit('address', $scope.address);
 
     socket.on('addr', function () {
+      confirmation.empty();
       confirmation.append('<p>' + $scope.address + '</p>'); 
     });
   }
