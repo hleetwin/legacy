@@ -20,7 +20,7 @@
         </div>
       </ng-map>    
     </div>
-    <div class='col-md-6'>
+    <div class='col-md-4'>
       <h4>Welcome to {{mapName}}!</h4>
       <form>
         <div class="form-group">
@@ -35,6 +35,13 @@
         <ul class="groupChat">
         </ul>
       </div>
+    </div>
+    <div class='col-md-2'>
+      <h5>Buddy List</h5>
+      <ul class="list-group" ng-repeat="client in tempDataStore">
+        <li class="list-group-item">{{client.userName}}</li>
+      </ul>
+
     </div>
   </div>
 </div>
