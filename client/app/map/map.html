@@ -48,12 +48,15 @@
     </div>
   </div>
   <br>
-  <div class='col-md-offset-2 col-md-4'>
+  <div class='col-md-offset-1 col-md-2'>
   Meeting Address
     <form>
       <input ng-model='address'></input>
     </form>
-    <button ng-click='placeMarker(map, address)'>Confirm Location</button>
-    <button ng-click='markAddress(map)'>Get Directions</button>
+    <button ng-click='confirmAddress()'>Confirm Location</button>
+    <button ng-click='getDirections()'>Get Directions</button>
+  </div>
+  <br>
+  <div class='col-md-1' id='confirmation'>
   </div>
 </div>
