@@ -1,8 +1,8 @@
 <div ng-init='init()'>
   <div id='map'>
     <h1 class = 'jumbotron'>mapchat
-      <a href='#/facebook' class='index' ng-click='logOut()' style='float: left'>HOME</a>
-      <a href='#/logout' class='create' ng-click='logOut(true)' style='float: right'>LOGOUT</a>
+      <a href='#/facebook' class='index' ng-click='logOut()' style='float: left'><span class="glyphicon glyphicon-home big" aria-hidden="true"></span></a>
+      <a href='#/logout' class='create' ng-click='logOut(true)' style='float: right'><span class="glyphicon glyphicon-off big" aria-hidden="true"></span></a>
     </h1>
   </div>
 
@@ -37,7 +37,7 @@
       </div>
     </div>
     <div class='col-md-2'>
-      <h5>Buddy List</h5>
+      <h5><span class="glyphicon glyphicon-user"></span> Buddy List</h5>
       <ul class="list-group" ng-repeat="client in tempDataStore">
         <li class="list-group-item">{{client.userName}}</li>
       </ul>
