@@ -81,9 +81,9 @@ angular.module('app.map', ['ngOpenFB', 'ngMap'])
 
   $scope.confirmAddress = function() {
     socket.emit('address', $scope.address);
-
-    socket.on('addr', function (address) {
-      $scope.realAddress = address; 
-    });
   }
+
+  socket.on('addr', function (address) {
+    $scope.realAddress = address; 
+  });
 }]);
