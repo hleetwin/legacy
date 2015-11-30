@@ -22,6 +22,7 @@
 
 .navbar .nav li > a:active {
   background-color: #27496d;
+ /* background-color: #3aa3e6;*/
   border-radius: 5px;
 }
 
@@ -30,7 +31,7 @@
   margin: 10px;
   border-radius: 5px;
   wide: 80%;
-  background-color: #6496c8;
+  background-color: #3aa3e6;
 }
 
 
@@ -62,7 +63,8 @@
   margin: 10px;
   border-radius: 5px;
   /*wide: 80%;*/
-  /*background-color: #6496c8;*/
+ /* background-color: #6496c8;*/
+  /*background-color: #3aa3e6;*/
 }
 
 .create {
@@ -73,7 +75,9 @@
   margin: 10px;
   border-radius: 5px;
   /*wide: 80%;*/
-  /*background-color: #6496c8;*/
+  /*edit*/
+ /* background-color: #3aa3e6;*/
+/*  background-color: #6496c8;*/
 }
 
 .chatlog {
