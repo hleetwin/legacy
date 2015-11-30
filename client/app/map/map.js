@@ -16,12 +16,6 @@ angular.module('app.map', ['ngOpenFB', 'ngMap'])
   $scope.tempDataStore;
   $scope.intervalFunc;
 
-  socket.emit('address', $scope.address);
-
-  socket.on('addr', function (addr) {
-    $scope.address = addr; 
-  });
-
   $scope.submitMessage = function(map, windowName) {
     $scope.showBubble(map, windowName);
     $scope.postMessage();
@@ -81,11 +75,18 @@ angular.module('app.map', ['ngOpenFB', 'ngMap'])
     map.showInfoWindow(elementName);
   }
 
-  $scope.markAddress = function(map) {
+  $scope.getDirections = function() {
     window.open("http://maps.google.com/maps?saddr=”My Location”&daddr='" + $scope.address + "'"  , "", "width=900, height=900");
   }
 
-  $scope.placeMarker = function(map, address) {
-    
+  $scope.confirmAddress = function() {
+    var confirmation = angular.element( document.querySelector('#confirmation'));
+
+    socket.emit('address', $scope.address);
+
+    socket.on('addr', function () {
+      confirmation.empty();
+      confirmation.append('<p>' + $scope.address + '</p>'); 
+    });
   }
 }]);
