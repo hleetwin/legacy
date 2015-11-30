@@ -33,6 +33,7 @@
   background-color: #6496c8;
 }
 
+
 .nav {
   text-align: center;
 }
@@ -42,6 +43,11 @@
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   color: white;
+}
+
+.logout {
+  font-size: 20px;
+  width: 100%;
 }
 
 .map {
