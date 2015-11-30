@@ -41,8 +41,8 @@
     </div>
     <div class='col-md-2'>
       <h5><span class="glyphicon glyphicon-user"></span> Buddy List</h5>
-      <ul class="list-group" ng-repeat="client in tempDataStore">
-        <li class="list-group-item"><img src="{{ client.userPic }}" />{{client.userName}}</li>
+      <ul class="list-group">
+        <li class="list-group-item" ng-repeat="client in tempDataStore"><img src="{{ client.userPic }}" />{{client.userName}}</li>
       </ul>
 
     </div>
