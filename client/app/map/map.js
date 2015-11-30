@@ -25,7 +25,8 @@ angular.module('app.map', ['ngOpenFB', 'ngMap'])
     $scope.tempDataStore = data;
   });
 
-  socket.on('message', function (info) {
+  socket.on('info', function (info) {
+
     var groupChat = angular.element( document.querySelector('.groupChat'));
     groupChat.append('<li>' + info.userName + ': ' + info.message + '</li>');
   })
