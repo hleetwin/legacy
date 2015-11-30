@@ -28,6 +28,9 @@ io.on('connection', function (socket) {
   socket.on('msg', function (info) {
     io.sockets.emit('info', info);
   });
+  socket.on('address', function (address) {
+    io.sockets.emit('addr', address)
+  })
 });
 
 module.exports = app;

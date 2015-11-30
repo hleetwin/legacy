@@ -32,6 +32,10 @@ angular.module('app', [
     .when('/logout', {
       redirectTo: '/home'
     })
+    .when('/directions', {
+      templateUrl: 'app/map/directions.html',
+      controller: 'MapController'
+    })
     .otherwise({
       redirectTo: '/home'
     });
